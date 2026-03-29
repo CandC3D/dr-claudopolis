@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLORS } from '../constants';
+import { COLORS } from '../config/theopolis';
 
 function LEDRing({ radius, count, color, intensity, delay = 0, speed = 2000 }) {
   const leds = [];

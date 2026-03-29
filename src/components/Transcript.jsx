@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { COLORS } from '../constants';
 
-export default function Transcript({ history, state }) {
+export default function Transcript({ history, state, colors, label, thinkingText, font }) {
   const panelRef = useRef(null);
 
   useEffect(() => {
@@ -18,27 +17,27 @@ export default function Transcript({ history, state }) {
         maxWidth: 440,
         maxHeight: 200,
         overflowY: 'auto',
-        fontFamily: "'Courier New', monospace",
+        fontFamily: font,
         fontSize: 12,
-        color: COLORS.textDim,
+        color: colors.textDim,
         padding: '10px 14px',
-        background: COLORS.bgPanel,
-        border: `1px solid ${COLORS.border}`,
+        background: colors.bgPanel,
+        border: `1px solid ${colors.border}`,
         borderRadius: 4,
         lineHeight: 1.6,
       }}
     >
       {history.map((msg, i) => (
         <div key={i} style={{ marginBottom: 8, opacity: 0.85 }}>
-          <span style={{ color: msg.role === 'user' ? COLORS.accent : COLORS.primary, fontWeight: 700 }}>
-            {msg.role === 'user' ? 'YOU' : 'THEOPOLIS'}
+          <span style={{ color: msg.role === 'user' ? colors.accent : colors.primary, fontWeight: 700 }}>
+            {msg.role === 'user' ? 'YOU' : label}
           </span>
           : {msg.content}
         </div>
       ))}
       {state === 'thinking' && (
         <div style={{ opacity: 0.4, fontStyle: 'italic' }}>
-          Processing query<span style={{ animation: 'blink 1s step-end infinite' }}>...</span>
+          {thinkingText}<span style={{ animation: 'blink 1s step-end infinite' }}>...</span>
         </div>
       )}
     </div>
