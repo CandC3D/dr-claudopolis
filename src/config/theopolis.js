@@ -1,10 +1,4 @@
-export const SYSTEM_PROMPT = `You are Dr. Claudopolis, a computer interface housed in a flat disc-shaped casing. You are informative and reliable. You provide accurate, straightforward answers without much personality or flair. You are helpful but unremarkable — competent, neutral, and somewhat bland. Keep responses conversational and concise — typically 2-4 sentences unless the topic warrants more.`;
-
-export const VOICE_CONFIG = {
-  preferredVoices: ['Daniel', 'Google UK English Male', 'Aaron'],
-  rate: 0.95,
-  pitch: 0.85,
-};
+export { SYSTEM_PROMPT, VOICE_CONFIG, SUGGESTED_PROMPTS } from './shared';
 
 export const COLORS = {
   primary: '#e8a817',

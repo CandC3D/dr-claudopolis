@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import TheopolisDisc from '../components/TheopolisDisc';
 import Transcript from '../components/Transcript';
+import SuggestedPrompts from '../components/SuggestedPrompts';
 import useChatEngine from '../hooks/useChatEngine';
 import * as config from '../config/theopolis';
 
@@ -77,6 +78,14 @@ export default function TheopolisPage() {
           SEND
         </button>
       </div>
+
+      {engine.history.length === 0 && engine.state === 'idle' && (
+        <SuggestedPrompts
+          prompts={config.SUGGESTED_PROMPTS}
+          onSelect={(text) => engine.sendMessage(text)}
+          colors={config.COLORS} font={config.FONT}
+        />
+      )}
 
       {engine.error && (
         <div style={{

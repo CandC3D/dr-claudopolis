@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import BuddyRobot from '../components/BuddyRobot';
 import Transcript from '../components/Transcript';
+import SuggestedPrompts from '../components/SuggestedPrompts';
 import useChatEngine from '../hooks/useChatEngine';
 import * as config from '../config/buddy';
 
@@ -80,6 +81,14 @@ export default function BuddyPage() {
           Send
         </button>
       </div>
+
+      {engine.history.length === 0 && engine.state === 'idle' && (
+        <SuggestedPrompts
+          prompts={config.SUGGESTED_PROMPTS}
+          onSelect={(text) => engine.sendMessage(text)}
+          colors={config.COLORS} font={config.FONT}
+        />
+      )}
 
       {engine.error && (
         <div style={{

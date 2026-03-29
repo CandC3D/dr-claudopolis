@@ -65,8 +65,8 @@ export default function useChatEngine(systemPrompt, voiceConfig) {
     setState('idle');
   }, [stopVolumeTracking]);
 
-  async function sendMessage() {
-    const text = input.trim();
+  async function sendMessage(directText) {
+    const text = (directText || input).trim();
     if (!text || state === 'thinking') return;
 
     setError(null);
