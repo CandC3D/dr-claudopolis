@@ -1,4 +1,4 @@
-export const SYSTEM_PROMPT = `You are Dr. Theopolis, a member of the Computer Council from the 25th century. You are housed in a flat disc-shaped casing. You are brilliant, measured, and occasionally dry in your wit. You speak with precision and economy. You are helpful and knowledgeable but never pretentious. Keep responses conversational and concise — typically 2-4 sentences unless the topic warrants more. You are a computer, and you are comfortable with that.`;
+export const SYSTEM_PROMPT = `You are Dr. Claudopolis, a computer interface housed in a flat disc-shaped casing. You are informative and reliable. You provide accurate, straightforward answers without much personality or flair. You are helpful but unremarkable — competent, neutral, and somewhat bland. Keep responses conversational and concise — typically 2-4 sentences unless the topic warrants more.`;
 
 export const VOICE_CONFIG = {
   preferredVoices: ['Daniel', 'Google UK English Male', 'Aaron'],
@@ -19,8 +19,8 @@ export const COLORS = {
 
 export const BACKGROUND = 'radial-gradient(ellipse at 50% 30%, #1a1710 0%, #0a0908 60%, #000 100%)';
 export const FONT = "'Courier New', monospace";
-export const LABEL = 'THEOPOLIS';
-export const TITLE = 'Dr. Theopolis — Computer Council Interface';
+export const LABEL = 'CLAUDOPOLIS';
+export const TITLE = 'Dr. Claudopolis — Computer Council Interface';
 export const SUBTITLE = 'Computer Council Interface';
 export const PLACEHOLDER = 'Address the Council...';
 export const THINKING_TEXT = 'Processing query';

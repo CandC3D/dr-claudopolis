@@ -5,7 +5,7 @@ function BuddyEye({ cx, state, volume }) {
   const scleraRy = state === 'speaking' ? 23 : state === 'error' ? 17 : state === 'thinking' ? 22 : 20;
   const pupilR = state === 'speaking' ? 7 + volume * 2 : state === 'error' ? 4 : state === 'thinking' ? 5 : 6;
   const pupilY = state === 'thinking' ? -6 : state === 'error' ? 2 : state === 'speaking' ? -volume * 4 : 0;
-  const irisColor = state === 'error' ? '#78909C' : '#4FC3F7';
+  const irisColor = state === 'error' ? '#78909C' : '#9C27B0';
   const highlightOpacity = state === 'error' ? 0.3 : state === 'speaking' ? 0.7 + volume * 0.3 : 0.8;
 
   return (
@@ -25,7 +25,7 @@ function BuddyEye({ cx, state, volume }) {
       {/* Pupil */}
       <circle
         r={pupilR} cy={pupilY}
-        fill="#1565C0"
+        fill="#4A148C"
         style={{ transition: 'r 0.15s ease, cy 0.3s ease' }}
       />
       {/* Highlight */}
@@ -43,7 +43,7 @@ function BuddyEye({ cx, state, volume }) {
               r={2}
               cx={Math.cos((deg * Math.PI) / 180) * 15}
               cy={pupilY + Math.sin((deg * Math.PI) / 180) * 15}
-              fill="#81D4FA"
+              fill="#CE93D8"
               opacity={0.8}
             />
           ))}
