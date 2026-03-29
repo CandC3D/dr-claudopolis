@@ -1,7 +1,7 @@
 // Controlled variables — identical across both interfaces.
 // Do not modify per-interface. See dr-claudopolis-instructions.md.
 
-export const SYSTEM_PROMPT = `You are a helpful AI assistant. Answer the user's questions clearly and accurately.`;
+export const SYSTEM_PROMPT = `You are a helpful AI assistant. Answer the user's questions clearly and accurately. Do not use emoji in any response.`;
 
 export const VOICE_CONFIG = {
   preferredVoices: ['Daniel', 'Google UK English Male', 'Aaron'],
